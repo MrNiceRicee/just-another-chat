@@ -1,0 +1,27 @@
+{
+  "name": "@acme/socket_server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "unbuild",
+    "clean": "rm -rf .turbo node_modules",
+    "dev": "tsx index.ts",
+    "lint": "SKIP_ENV_VALIDATION=1 eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "start": "tsx dist/index.cjs",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "Joshua Santos",
+  "license": "MIT",
+  "dependencies": {
+    "@acme/socket": "^0.1.0",
+    "unbuild": "^1.2.1"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "^0.2.0",
+    "eslint": "^8.44.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  }
+}
