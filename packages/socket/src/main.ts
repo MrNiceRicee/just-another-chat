@@ -42,10 +42,9 @@ function server() {
           // The connection has been closed
           connection.socket.send("closed");
         });
-        connection.socket.on("message", (message) => {
+        connection.socket.on("message", (message, isBinary) => {
           try {
-            // eslint-disable-next-line @typescript-eslint/no-base-to-string
-            const data = message.toString();
+            const data = isBinary ? message : JSON.stringify(message);
 
             if (typeof data === "string") {
               connection.socket.send(`you sent: ${data}`);
