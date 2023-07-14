@@ -5,11 +5,12 @@
   "scripts": {
     "build": "unbuild",
     "clean": "rm -rf .turbo node_modules",
-    "dev": "tsx index.ts",
+    "dev": "pnpm with-env tsx ./src/index.ts",
     "lint": "SKIP_ENV_VALIDATION=1 eslint .",
     "lint:fix": "pnpm lint --fix",
     "start": "tsx dist/index.cjs",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
   },
   "keywords": [],
   "author": "Joshua Santos",
@@ -20,7 +21,9 @@
   },
   "devDependencies": {
     "@acme/eslint-config": "^0.2.0",
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.44.0",
+    "pino-pretty": "^10.0.1",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
   }
