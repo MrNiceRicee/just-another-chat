@@ -1,0 +1,5 @@
+packages:
+  - apps/nextjs
+  - apps/socket_server
+  - packages/socket
+  - packages/config/*
