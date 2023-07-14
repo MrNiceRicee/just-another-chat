@@ -6,6 +6,10 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", ".expo/**", "dist/**"]
     },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    },
     "lint": {
       "dependsOn": ["build"]
     },
@@ -22,6 +26,7 @@
     }
   },
   "globalEnv": [
-    "NODE_ENV"
+    "NODE_ENV",
+    "PORT"
   ]
 }

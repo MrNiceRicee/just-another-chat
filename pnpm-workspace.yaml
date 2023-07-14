@@ -1,4 +1,4 @@
 packages:
-  - packages/api
-  - packages/db
+  - apps/socket_server
+  - packages/socket
   - packages/config/*

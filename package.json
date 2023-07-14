@@ -9,6 +9,7 @@
     "build": "turbo build",
     "clean": "git clean -xdf node_modules dist .next",
     "clean:workspaces": "turbo clean",
+    "dev": "turbo dev",
     "lint": "turbo lint && manypkg check",
     "lint:fix": "turbo lint:fix && manypkg fix",
     "type-check": "turbo type-check"
