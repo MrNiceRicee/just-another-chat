@@ -1,0 +1,28 @@
+{
+  "name": "just-another-realtime",
+  "private": true,
+  "engines": {
+    "node": ">=v18.16.1"
+  },
+  "packageManager": "pnpm@8.6.6",
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules dist .next",
+    "clean:workspaces": "turbo clean",
+    "lint": "turbo lint && manypkg check",
+    "lint:fix": "turbo lint:fix && manypkg fix",
+    "type-check": "turbo type-check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
+    "@manypkg/cli": "^0.21.0",
+    "@types/prettier": "^2.7.3",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.4.0",
+    "turbo": "^1.10.7",
+    "typescript": "^5.1.6"
+  }
+}
