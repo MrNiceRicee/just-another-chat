@@ -1,10 +1,11 @@
 {
   "name": "@acme/socket",
   "version": "0.1.0",
-  "main": "./src/main.ts",
-  "types": "./src/main.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "license": "MIT",
   "scripts": {
+    "build": "tsup index.ts",
     "clean": "rm -rf .turbo node_modules",
     "lint": "SKIP_ENV_VALIDATION=1  eslint .",
     "lint:fix": "pnpm lint --fix",
@@ -21,6 +22,7 @@
     "@types/node": "^20.4.2",
     "@types/ws": "^8.5.5",
     "eslint": "^8.44.0",
+    "tsup": "^7.1.0",
     "typescript": "^5.1.6"
   }
 }

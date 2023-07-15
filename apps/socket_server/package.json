@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tsup src/index.ts --clean",
+    "build": "tsup src/index.ts",
     "clean": "rm -rf .turbo node_modules",
     "dev": "pnpm with-env tsx ./src/index.ts",
     "lint": "SKIP_ENV_VALIDATION=1 eslint .",
     "lint:fix": "pnpm lint --fix",
-    "start": "tsx dist/index.js",
+    "start": "pnpm with-env node dist/index.js",
     "type-check": "tsc --noEmit",
     "with-env": "dotenv -e ../../.env --"
   },
@@ -16,8 +16,7 @@
   "author": "Joshua Santos",
   "license": "MIT",
   "dependencies": {
-    "@acme/socket": "^0.1.0",
-    "unbuild": "^1.2.1"
+    "@acme/socket": "^0.1.0"
   },
   "devDependencies": {
     "@acme/eslint-config": "^0.2.0",
