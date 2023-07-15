@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "unbuild",
+    "build": "tsup src/index.ts --clean",
     "clean": "rm -rf .turbo node_modules",
     "dev": "pnpm with-env tsx ./src/index.ts",
     "lint": "SKIP_ENV_VALIDATION=1 eslint .",
     "lint:fix": "pnpm lint --fix",
-    "start": "tsx dist/index.cjs",
+    "start": "tsx dist/index.js",
     "type-check": "tsc --noEmit",
     "with-env": "dotenv -e ../../.env --"
   },
@@ -24,6 +24,7 @@
     "dotenv-cli": "^7.2.1",
     "eslint": "^8.44.0",
     "pino-pretty": "^10.0.1",
+    "tsup": "^7.1.0",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
   }
