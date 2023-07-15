@@ -5,7 +5,8 @@
   "types": "./dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsup index.ts",
+    "dev": "pnpm run build --watch",
+    "build": "tsup",
     "clean": "rm -rf .turbo node_modules",
     "lint": "SKIP_ENV_VALIDATION=1  eslint .",
     "lint:fix": "pnpm lint --fix",

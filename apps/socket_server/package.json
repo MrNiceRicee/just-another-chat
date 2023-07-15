@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tsup src/index.ts",
+    "build": "tsup",
     "clean": "rm -rf .turbo node_modules",
     "dev": "pnpm with-env tsx ./src/index.ts",
     "lint": "SKIP_ENV_VALIDATION=1 eslint .",
