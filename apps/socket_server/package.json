@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "build": "tsup",
-    "clean": "rm -rf .turbo node_modules",
+    "clean": "rm -rf .turbo node_modules dist",
     "dev": "pnpm with-env tsx ./src/index.ts",
     "lint": "SKIP_ENV_VALIDATION=1 eslint .",
     "lint:fix": "pnpm lint --fix",
-    "start": "pnpm with-env node dist/index.js --omit-dev",
+    "start": "pnpm with-env node dist/index.mjs --omit-dev",
     "type-check": "tsc --noEmit",
     "with-env": "dotenv -e ../../.env --"
   },

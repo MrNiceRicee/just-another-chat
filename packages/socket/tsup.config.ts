@@ -1,9 +1,12 @@
-import { defineConfig } from 'tsup'
+import { defineConfig } from "tsup";
 
-export default defineConfig({
-  entry: ['index.ts'],
-  clean: true,
+export default defineConfig((opts) => ({
+  entry: ["index.ts"],
+  format: ["esm"],
+  clean: !opts.watch,
+  minify: !opts.watch,
   dts: true,
   sourcemap: true,
-  format: ['cjs', 'esm'],
-})
+  splitting: true,
+  treeshake: true,
+}));
