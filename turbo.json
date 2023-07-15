@@ -27,6 +27,6 @@
   },
   "globalEnv": [
     "NODE_ENV",
-    "PORT"
+    "SERVER_PORT"
   ]
 }
