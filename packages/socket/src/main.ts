@@ -33,7 +33,9 @@ function server() {
     fast.get(
       "/socket",
       { websocket: true },
-      (connection /* SocketStream */, _req /* FastifyRequest */) => {
+      (connection /* SocketStream */, req /* FastifyRequest */) => {
+        req.log.info("socket connection");
+
         connection.socket.on("open", () => {
           // message.toString() === 'hi from client'
           connection.socket.send("hi from server");
@@ -44,7 +46,8 @@ function server() {
         });
         connection.socket.on("message", (message, isBinary) => {
           try {
-            const data = isBinary ? message : JSON.stringify(message);
+            // eslint-disable-next-line @typescript-eslint/no-base-to-string
+            const data = isBinary ? message : message.toString();
 
             if (typeof data === "string") {
               connection.socket.send(`you sent: ${data}`);
