@@ -38,10 +38,12 @@ function server() {
 
         connection.socket.on("open", () => {
           // message.toString() === 'hi from client'
+          req.log.info("a client connected");
           connection.socket.send("hi from server");
         });
         connection.socket.on("close", () => {
           // The connection has been closed
+          req.log.info("a client disconnected");
           connection.socket.send("closed");
         });
         connection.socket.on("message", (message, isBinary) => {
