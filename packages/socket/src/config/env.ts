@@ -3,11 +3,13 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    SERVER_PORT: z.coerce.number().min(0).max(65535),
+    PORT: z.coerce.number().min(0).max(65535),
+    SERVER_HOST: z.string(),
     NODE_ENV: z.enum(["development", "production", "test"]),
   },
   runtimeEnvStrict: {
-    SERVER_PORT: process.env.SERVER_PORT,
+    PORT: process.env.PORT,
+    SERVER_HOST: process.env.SERVER_HOST,
     NODE_ENV: process.env.NODE_ENV,
   },
 });
