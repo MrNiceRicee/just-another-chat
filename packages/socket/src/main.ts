@@ -81,7 +81,7 @@ export function start() {
 
   // eslint-disable-next-line no-console
   console.log("attempting to start server");
-  app.listen({ port: env.SERVER_PORT }, (err, address) => {
+  app.listen({ port: env.SERVER_PORT, host: "0.0.0.0" }, (err, address) => {
     if (err) {
       console.error(err);
       process.exit(1);
