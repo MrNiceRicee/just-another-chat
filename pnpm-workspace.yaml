@@ -1,5 +1,6 @@
 packages:
   - apps/nextjs
   - apps/socket_server
+  - apps/astro
   - packages/socket
   - packages/config/*
